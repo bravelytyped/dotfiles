@@ -1,0 +1,9 @@
+[submodule ".vim/bundle/pathogen"]
+	path = .vim/bundle/pathogen
+	url = git@github.com:tpope/vim-pathogen.git
+[submodule ".vim/bundle/colors-solarized"]
+	path = .vim/bundle/colors-solarized
+	url = git@github.com:altercation/vim-colors-solarized.git
+[submodule ".nvm"]
+	path = .nvm
+	url = git@github.com:creationix/nvm.git

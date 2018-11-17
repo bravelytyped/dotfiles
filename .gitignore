@@ -1,0 +1,8 @@
+# Ignore paths that we definitely will never want to commit.
+.cache/
+.gnupg/
+.local/
+.ssh/
+
+# Ignore Vim swap files.
+.*.swp
