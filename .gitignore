@@ -1,8 +1,16 @@
-# Ignore paths that we definitely will never want to commit.
-.cache/
-.gnupg/
-.local/
-.ssh/
+# Whitelist instead of blacklist.
+/*
 
-# Ignore Vim swap files.
-.*.swp
+# Vim plugins and nvm are submodules.
+!/.nvm
+!/.vim
+
+# Git-related config files.
+!/.gitconfig
+!/.gitignore
+!/.gitmodules
+
+# Various config files.
+!/.tmux.conf
+!/.vimrc
+!/.zshrc

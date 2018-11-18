@@ -18,12 +18,51 @@ bindkey -v
 
 alias ls='ls --color=auto --classify'
 
+# Custom prompt
+# ------------------------------------------------
+
+declare -r PROMPT_VCS_BRANCH_SYMBOL=''
+declare -r PROMPT_VCS_CLEAN_SYMBOL=''
+declare -r PROMPT_VCS_DIRTY_SYMBOL=''
+
+precmd() {
+  set-prompt
+}
+
+set-prompt() {
+  local -a lines
+  lines=(
+    "╭ %B%F{magenta}%/%f%b $(git-branch)"
+    "╰ %F{magenta}λ%f "
+  )
+  PS1="${(F)lines}"
+}
+
+git-branch() {
+  local -r refname="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
+  local -r changes="$(git diff-index HEAD -- 2>/dev/null)"
+  local -r untracked="$(git ls-files --exclude-standard --others 2>/dev/null)"
+
+  local result
+  if [[ "${#refname}" > 0 ]]
+  then
+    result="%F{blue}$PROMPT_VCS_BRANCH_SYMBOL $refname%f"
+  fi
+
+  if [[ "${#changes}" > 0 || "${#untracked}" > 0 ]]
+  then
+    result="$result %F{yellow}$PROMPT_VCS_DIRTY_SYMBOL%f"
+  else
+    result="$result %F{green}$PROMPT_VCS_CLEAN_SYMBOL%f"
+  fi
+
+  echo "$result"
+}
+
 # Environment
 # ------------------------------------------------
 
-EDITOR=vim
-PS1='╭ %B%F{magenta}%/%f%b
-╰ %F{magenta}λ%f '
+export EDITOR=vim
 
 # nvm
 # ------------------------------------------------
