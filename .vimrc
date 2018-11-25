@@ -19,5 +19,9 @@ set fileencoding=utf-8
 set number
 set nowrap
 
+" Keybindings.
+nmap <F7> :NERDTree<CR>
+nmap <F8> :NERDTreeFind<CR>
+
 " Turn on filetype detection.
 filetype plugin indent on

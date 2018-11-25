@@ -7,3 +7,6 @@
 [submodule ".nvm"]
 	path = .nvm
 	url = git@github.com:creationix/nvm.git
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = git@github.com:scrooloose/nerdtree.git
