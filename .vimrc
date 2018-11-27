@@ -20,7 +20,7 @@ set number
 set nowrap
 
 " Keybindings.
-nmap <F7> :NERDTree<CR>
+nmap <F7> :NERDTreeToggle<CR>
 nmap <F8> :NERDTreeFind<CR>
 
 " Turn on filetype detection.
