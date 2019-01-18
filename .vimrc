@@ -25,3 +25,7 @@ nmap <F8> :NERDTreeFind<CR>
 
 " Turn on filetype detection.
 filetype plugin indent on
+
+" Override default Python & Rust indentation rules.
+autocmd FileType python setlocal softtabstop=2 shiftwidth=2
+autocmd FileType rust setlocal softtabstop=2 shiftwidth=2
