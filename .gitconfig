@@ -1,4 +1,9 @@
-# This is Git's per-user configuration file.
+[core]
+excludesfile = ~/.config/gitignore
+
+[push]
+default = simple
+
 [user]
-	name = Michael Carius
-	email = mcarius@bravelytyped.xyz
+name = Michael Carius
+email = mcarius@bravelytyped.xyz

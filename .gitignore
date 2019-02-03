@@ -1,6 +1,11 @@
 # Whitelist instead of blacklist.
 /*
 
+# Allow .config directory for specific files.
+!/.config
+/.config/*
+!/.config/gitignore
+
 # Vim plugins and nvm are submodules.
 !/.nvm
 !/.vim
