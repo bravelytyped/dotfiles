@@ -22,10 +22,10 @@ then
 
   OUTPUT="$GIT_SYMBOL $BRANCH | $STAGED $STAGED_SYMBOL $UNSTAGED $UNSTAGED_SYMBOL $UNTRACKED $UNTRACKED_SYMBOL"
 
-  if [[ "${#UNTRACKED}" > 0 || "${#UNSTAGED}" > 0 ]]
+  if [[ "$UNTRACKED" > 0 || "$UNSTAGED" > 0 ]]
   then
     COLOR="$DIRTY_COLOR"
-  elif [[ "${#STAGED}" > 0 ]]
+  elif [[ "$STAGED" > 0 ]]
   then
     COLOR="$STAGED_COLOR"
   else
