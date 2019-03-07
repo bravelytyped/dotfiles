@@ -6,11 +6,6 @@
 /.config/*
 !/.config/gitignore
 
-# Allow specific files from the Scripts directory (used in .zshrc etc).
-!/Scripts
-/Scripts/*
-!/Scripts/tmux-git-info
-
 # Vim plugins and nvm are submodules.
 !/.nvm
 !/.vim
