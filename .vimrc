@@ -29,3 +29,6 @@ filetype plugin indent on
 " Override default Python & Rust indentation rules.
 autocmd FileType python setlocal softtabstop=2 shiftwidth=2
 autocmd FileType rust setlocal softtabstop=2 shiftwidth=2
+
+" Recognize .tpp files as C++ (template implementations).
+autocmd BufRead,BufNewFile *.tpp setlocal filetype=cpp
